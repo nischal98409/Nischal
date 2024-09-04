@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Transfer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="balance">Available Balance: $777,275,566</div>
+        <a href="./paypal-option.html"><button class="transfer-paypal-button">Transfer Paypal</button></a>
+        <a href="./bank-option.html"><button class="transfer-bank-button">Transfer Bank</button></a>
+        <br><br><br>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-img">
+        </div>
+    </div>
+
+    <!-- Modal for Transaction Processing and Confirmation -->
+    <div class="modal" id="transactionModal">
+        <div class="modal-content" id="modalContent">
+            <!-- This content will be dynamically updated by JavaScript -->
+            <div id="processingState">
+                <div class="loader"></div>
+                <p>Processing...</p>
+            </div>
+            <div id="confirmationState" style="display: none;">
+                <div class="success-icon">✔️</div>
+                <p>Your transaction of $10,000 was successful!</p>
+                <p>You will receive $10,000 after 24 Hours.</p>
+                <button class="confirm-button" onclick="closeModal()">Confirm</button>
+                <div class="logo">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
